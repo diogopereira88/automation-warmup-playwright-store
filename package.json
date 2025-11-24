@@ -1,0 +1,22 @@
+{
+  "name": "automation-warmup-playwright-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogopereira88/automation-warmup-playwright-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diogopereira88/automation-warmup-playwright-store/issues"
+  },
+  "homepage": "https://github.com/diogopereira88/automation-warmup-playwright-store#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  }
+}
