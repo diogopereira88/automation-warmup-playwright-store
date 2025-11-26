@@ -46,9 +46,9 @@ export class CatalogPage {
 
 // ------------------------
 
-    async clickAddButton(id, add) {
+    async clickAddButton(id, quantity) {
         await test.step(`Click on "Add to Cart" button`, async () => {
-            await this.catalogItemAddButton(id).click({clickCount: add});
+            await this.catalogItemAddButton(id).click({clickCount: Number(quantity)});
         });
     }
 
@@ -59,10 +59,10 @@ export class CatalogPage {
             if (quantity === 0) {
                 return;
             };
-            if (disabled) {
-                return;
+            if (!disabled) {
+                await this.clickAddButton(id, quantity);
             };
-            await this.clickAddButton(id, quantity);       
+                   
         });
     }
 

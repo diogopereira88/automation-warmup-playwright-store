@@ -121,12 +121,6 @@ export class InventoryPage {
         })
     }
 
-    async validateErrorMessage(error) {
-        await test.step('Validate required fields message', async () => {
-          await expect(this.page.getByText(error.message)).toBeVisible();
-        });
-      }
-
 
 // ------------------------    
 
