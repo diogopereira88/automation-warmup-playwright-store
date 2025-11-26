@@ -1,17 +1,15 @@
-import { test, expect } from '@playwright/test';
-import { ERROR_MESSAGE, PRODUCTS, DISABLED_BUTTON } from './data/store.data';
-import { CartPage } from './pages/cart.page';
+import { test, expect } from "@playwright/test";
+import { ERROR_MESSAGE, PRODUCTS, DISABLED_BUTTON } from "./data/store.data";
+import { CartPage } from "./pages/cart.page";
 
-test.describe('Cart', () => {
-    test.beforeEach( async ({ page }) => {
-        const cart = new CartPage(page);
-        await cart.navigateToStoreCart();
-    });
+test.describe("Cart", () => {
+  test.beforeEach(async ({ page }) => {
+    const cart = new CartPage(page);
+    await cart.navigateToStoreCart();
+  });
 
-    test('Cart - Display empty Cart', async ({ page }) => {
-        const cart = new CartPage(page);
-        await cart.emptyCart();
-    });
-
-    
+  test("Cart - Display empty Cart", async ({ page }) => {
+    const cart = new CartPage(page);
+    await cart.emptyCart();
+  });
 });
