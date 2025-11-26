@@ -21,29 +21,31 @@ This suite verifies core store features: **Inventory**, **Catalog**, **Cart**, *
 
 ## Repository Structure
 
-/
-├── README.md # This file
-├── playwright.config.js # Playwright test configuration
-├── package.json # Node dependencies and scripts
-├── .github/workflows/ # GitHub Actions workflow (playwright.yml)
-├── tests/
-│ ├── data/ # Test data files for data-driven tests
-│ │ └── store.data.js
-│ ├── pages/ # Page Object Model classes
-│ │ ├── cart.page.js
-│ │ ├── catalog.page.js
-│ │ ├── inventory.page.js
-│ │ ├── orders.page.js
-│ │ ├── payments.page.js
-│ │ └── store.page.js
-│ ├── cart.spec.js # Test specs
-│ ├── catalog.spec.js
-│ ├── inventory.spec.js
-│ └── store.spec.js
-├── node_modules/ # Dependencies
-├── playwright-report/ # Playwright generated reports
-└── test-results/ # Raw test results (screenshots, traces, videos)
+```text
 
+├── README.md                 # This file
+├── playwright.config.js      # Playwright test configuration
+├── package.json              # Node dependencies and scripts
+├── .github
+│   └── workflows             # GitHub Actions workflow (playwright.yml)
+├── tests
+│   ├── data                  # Test data files for data-driven tests
+│   │   └── store.data.js
+│   ├── pages                 # Page Object Model classes
+│   │   ├── cart.page.js
+│   │   ├── catalog.page.js
+│   │   ├── inventory.page.js
+│   │   ├── orders.page.js
+│   │   ├── payments.page.js
+│   │   └── store.page.js
+│   ├── cart.spec.js           # Test specs
+│   ├── catalog.spec.js
+│   ├── inventory.spec.js
+│   └── store.spec.js
+├── node_modules              # Dependencies
+├── playwright-report         # Playwright generated reports
+└── test-results              # Raw test results (screenshots, traces, videos)
+```
 
 ---
 
@@ -85,8 +87,7 @@ export default defineConfig({
 ### ✓ Cart
 
 * Display Cart items
-* Calculate Cart total
-* Extract and assert data
+* Calculate Cart totals
 
 ### ✓ Payments
 
