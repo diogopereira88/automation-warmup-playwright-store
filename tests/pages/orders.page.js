@@ -4,13 +4,14 @@ export class OrderPage {
   constructor(page) {
     this.page = page;
 
+    // ===== Fixed locators =====
     this.root = page.getByTestId("store-page");
     this.orderTab = page.getByTestId("store-tab-orders");
     this.title = page.getByTestId("orders-title");
     this.emptyMessage = page.getByTestId("orders-empty-message");
   }
 
-  // -----------------------
+  // ===== Dynamic locators (by ID) =====
 
   orderNumber(id) {
     return this.page.getByTestId(`order-${id}`);

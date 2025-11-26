@@ -4,12 +4,13 @@ export class CatalogPage {
   constructor(page) {
     this.page = page;
 
+    // ===== Fixed locators =====
     this.root = page.getByTestId("store-page");
     this.catalogTab = page.getByTestId("store-tab-catalog");
     this.title = page.getByTestId("catalog-title");
   }
 
-  // ------------------------
+  // ===== Dynamic locators (by ID) =====
 
   catalogItem(id) {
     return this.page.getByTestId(`catalog-item-${id}`);

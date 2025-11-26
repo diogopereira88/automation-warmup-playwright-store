@@ -1,5 +1,4 @@
 import { expect, test } from "@playwright/test";
-import { InventoryPage } from "./inventory.page";
 import { CatalogPage } from "./catalog.page";
 import { CartPage } from "./cart.page";
 import { PaymentPage } from "./payments.page";
