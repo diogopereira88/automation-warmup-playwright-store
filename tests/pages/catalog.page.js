@@ -55,7 +55,7 @@ export class CatalogPage {
   async addToCart(id, quantity) {
     const title = await this.catalogItemName(id).textContent();
     const disabled = await this.catalogItemAddButton(id).isDisabled();
-    await test.step(`Add ${quantity} "${title}" to the cart`, async () => {
+    await test.step(`Add ${quantity} "${title}" to the cart (if available)`, async () => {
       if (quantity === 0) {
         return;
       }

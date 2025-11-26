@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-import { ERROR_MESSAGE, PRODUCTS, DISABLED_BUTTON } from "./data/store.data";
 import { CartPage } from "./pages/cart.page";
 
 test.describe("Cart", () => {

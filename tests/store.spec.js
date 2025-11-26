@@ -44,7 +44,7 @@ test.describe("Payments", () => {
 });
 
 test.describe("Orders", () => {
-  test("Orders - Display past order", async ({ page }) => {
+  test("Orders - Display past orders", async ({ page }) => {
     const store = new StorePage(page);
     const { id, quantity } = PRODUCTS.lightSaber;
     const paymentMethod =

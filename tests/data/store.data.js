@@ -24,15 +24,4 @@ export const DISABLED_BUTTON = {
 
 export const PAYMENT_METHODS = ['MBWay', 'Klarna', 'Multibanco', 'PayPal', 'Visa'];
 
-// async todaysDate() {
-//     const date = new Date();
-//     const currentDate = date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
-//   }
-// async todaysDate() {
-//     const date = new Date();
-//     const currentDate = `${date.getDate()}/${
-//       date.getMonth() + 1
-//     }/${date.getFullYear()}`;
-//     return currentDate;
-//   }
-// });
+
