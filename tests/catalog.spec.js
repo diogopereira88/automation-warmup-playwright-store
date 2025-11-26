@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { ERROR_MESSAGE, PRODUCTS, DISABLED_BUTTON } from "./data/store.data";
+import { PRODUCTS, DISABLED_BUTTON } from "./data/store.data";
 import { CatalogPage } from "./pages/catalog.page";
 
 test.describe("Catalog", () => {
@@ -8,7 +8,7 @@ test.describe("Catalog", () => {
     await catalog.navigateToStoreCatalog();
   });
 
-  test("Catalog - Add item to cart (if available)", async ({ page }) => {
+  test("Catalog - Add item to cart", async ({ page }) => {
     const catalog = new CatalogPage(page);
     const { id, name, price, quantity } = PRODUCTS.lightSaber;
     await catalog.addToCart(id, quantity);

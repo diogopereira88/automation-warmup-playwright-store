@@ -4,6 +4,7 @@ export class PaymentPage {
   constructor(page) {
     this.page = page;
 
+    // ===== Fixed locators =====
     this.root = page.getByTestId("store-page");
     this.paymentTab = page.getByTestId("store-tab-payment");
     this.title = page.getByTestId("payment-title");
@@ -17,7 +18,7 @@ export class PaymentPage {
     this.confirmPaymentButton = page.getByTestId("payment-confirm-button");
   }
 
-  // -----------------------
+  // ===== Dynamic locators (by ID) =====
 
   paymentItem(id) {
     return this.page.getByTestId(`payment-cart-item-${id}`);
@@ -42,10 +43,9 @@ export class PaymentPage {
   paymentAllItemsTotalValue() {
     return this.page.$$('[data-testid^="payment-item-total-value-"]');
   }
-
-  paymentMethod(pay){
-    return this.page.getByTestId(`payment-method-input-${pay}`)
-
+  
+  paymentMethod(pay) {
+    return this.page.getByTestId(`payment-method-input-${pay}`);
   }
 
   // -----------------------
@@ -78,7 +78,7 @@ export class PaymentPage {
 
   async selecPaymentMethod(pay) {
     await test.step(`Select payment method: ${pay}`, async () => {
-        await this.paymentMethod(pay).click();
+      await this.paymentMethod(pay).click();
     });
   }
 

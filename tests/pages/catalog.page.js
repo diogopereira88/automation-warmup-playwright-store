@@ -4,12 +4,13 @@ export class CatalogPage {
   constructor(page) {
     this.page = page;
 
+    // ===== Fixed locators =====
     this.root = page.getByTestId("store-page");
     this.catalogTab = page.getByTestId("store-tab-catalog");
     this.title = page.getByTestId("catalog-title");
   }
 
-  // ------------------------
+  // ===== Dynamic locators (by ID) =====
 
   catalogItem(id) {
     return this.page.getByTestId(`catalog-item-${id}`);
@@ -55,7 +56,7 @@ export class CatalogPage {
   async addToCart(id, quantity) {
     const title = await this.catalogItemName(id).textContent();
     const disabled = await this.catalogItemAddButton(id).isDisabled();
-    await test.step(`Add ${quantity} "${title}" to the cart`, async () => {
+    await test.step(`Add ${quantity} "${title}" to the cart (if available)`, async () => {
       if (quantity === 0) {
         return;
       }

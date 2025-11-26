@@ -4,6 +4,7 @@ export class CartPage {
   constructor(page) {
     this.page = page;
 
+    // ===== Fixed locators =====
     this.root = page.getByTestId("store-page");
     this.cartTab = page.getByTestId("store-tab-cart");
     this.title = page.getByTestId("cart-title");
@@ -12,7 +13,7 @@ export class CartPage {
     this.proceedToPaymentsButton = page.getByTestId("cart-go-to-payment");
   }
 
-  // -----------------------
+  // ===== Dynamic locators (by ID) =====
 
   cartItem(id) {
     return this.page.getByTestId(`cart-item-${id}`);

@@ -4,6 +4,7 @@ export class InventoryPage {
   constructor(page) {
     this.page = page;
 
+    // ===== Fixed locators =====
     this.root = page.getByTestId("store-page");
     this.inventoryTab = page.getByTestId("store-tab-inventory");
     this.title = page.getByTestId("inventory-title");
@@ -13,8 +14,8 @@ export class InventoryPage {
     this.submitButton = page.getByTestId("inventory-submit-button");
   }
 
-  // ------------------------
-
+  // ===== Dynamic locators (by ID) =====
+  
   productItem(id) {
     return this.page.getByTestId(`inventory-product-${id}`);
   }
